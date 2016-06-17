@@ -1,15 +1,16 @@
 source 'https://rubygems.org'
 
-gem 'devise_token_auth'
 gem 'rails', '4.2.6'
-gem 'devise'
 gem 'rails-api'
+gem 'devise_token_auth'
+gem 'devise'
+gem 'pg'
 gem 'omniauth'
 gem 'spring', :group => :development
 
 gem 'rack-cors', :require => 'rack/cors'
-gem 'pg'
-gem 'active_model_serializers'
+
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
