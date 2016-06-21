@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.2.1"
 gem 'rails', '4.2.6'
 gem 'rails-api'
 gem 'devise_token_auth'
