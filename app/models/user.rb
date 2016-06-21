@@ -6,8 +6,9 @@ class User < ActiveRecord::Base
 
   include DeviseTokenAuth::Concerns::User
 
-
   before_action :configure_permitted_parameters, if: :devise_controller?
+
+  has_one :profile
 
   protected
 
@@ -15,5 +16,4 @@ class User < ActiveRecord::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :bio])
   end
 
-  has_one :profile
 end
