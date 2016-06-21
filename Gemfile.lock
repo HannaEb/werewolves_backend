@@ -103,6 +103,7 @@ GEM
       mimemagic (= 0.3.0)
     pg (0.18.4)
     pkg-config (1.1.7)
+    puma (3.4.0)
     rack (1.6.4)
     rack-cors (0.4.0)
     rack-test (0.6.3)
@@ -187,12 +188,16 @@ DEPENDENCIES
   omniauth
   paperclip
   pg
+  puma
   rack-cors
   rails (= 4.2.6)
   rails-api
   rails_12factor
   rspec-rails
   spring
+
+RUBY VERSION
+   ruby 2.2.1p85
 
 BUNDLED WITH
    1.12.5
