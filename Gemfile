@@ -6,6 +6,8 @@ gem 'devise_token_auth'
 gem 'devise'
 gem 'pg'
 gem 'omniauth'
+gem 'paperclip'
+gem "aws-sdk"
 gem 'spring', :group => :development
 
 gem 'rack-cors', :require => 'rack/cors'
