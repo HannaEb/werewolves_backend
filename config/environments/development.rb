@@ -30,11 +30,17 @@ Rails.application.configure do
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
+
+
+
   config.paperclip_defaults = {
     :storage => :s3,
-    # :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
-    :bucket => 'wwtwo-app-profilepics'
-  }
+    :s3_credentials => {
+        :bucket => ENV['wwgametwo'],
+        :access_key_id => ENV['AKIAJK74GBPHAXE33QHQ'],
+        :secret_access_key => ENV['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']
+    }
+}
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.

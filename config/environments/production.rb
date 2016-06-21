@@ -24,6 +24,15 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+        :bucket => ENV['wwgametwo'],
+        :access_key_id => ENV['AKIAJK74GBPHAXE33QHQ'],
+        :secret_access_key => ENV['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']
+    }
+}
+
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
