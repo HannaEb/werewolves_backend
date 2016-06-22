@@ -15,8 +15,10 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'puma'
 gem 'certified'
 gem 'figaro'
+gem 'rspec-json_expectations'
 
 group :development, :test do
+
   gem 'byebug'
   gem 'rspec-rails'
   gem 'dotenv-rails'
