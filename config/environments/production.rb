@@ -27,9 +27,9 @@ Rails.application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-        :bucket => ENV['wwgametwo'],
-        :access_key_id => ENV['AKIAJK74GBPHAXE33QHQ'],
-        :secret_access_key => ENV['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']
+        :bucket => ENV['s3_bucket'],
+        :access_key_id => ENV['aws_key_id'],
+        :secret_access_key => ENV['aws_secret']
     }
 }
 

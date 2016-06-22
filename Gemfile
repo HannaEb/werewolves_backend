@@ -7,13 +7,14 @@ gem 'devise'
 gem 'pg'
 gem 'omniauth'
 gem 'paperclip'
-gem 'aws-sdk', '~> 2.3'
+gem 'aws-sdk'
 gem 'spring', :group => :development
 gem 'rails_12factor', group: :production
 gem 'active_model_serializers'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'puma'
-
+gem 'certified'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug'

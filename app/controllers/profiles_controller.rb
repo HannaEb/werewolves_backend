@@ -21,11 +21,10 @@ class ProfilesController < ApplicationController
  private
 
  def profile_params
-   image = convert_image
-   params.permit(:event, :image).merge(image: image)
+   params.permit(:image)
  end
 
- def convert_image
-   Paperclip.io_adapters.for(params[:image])
- end
+ # def convert_image
+ #   Paperclip.io_adapters.for(params[:image])
+ # end
 end
