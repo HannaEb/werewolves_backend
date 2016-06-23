@@ -33,14 +33,14 @@ Rails.application.configure do
 
 
 #
-config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-      :bucket => ENV['s3_bucket'],
-      :access_key_id => ENV['aws_key_id'],
-      :secret_access_key => ENV['aws_secret']
-  }
-}
+# config.paperclip_defaults = {
+#   :storage => :s3,
+#   :s3_credentials => {
+#       :bucket => ENV['s3_bucket'],
+#       :access_key_id => ENV['aws_key_id'],
+#       :secret_access_key => ENV['aws_secret']
+#   }
+# }
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.

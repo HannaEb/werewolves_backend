@@ -1,12 +1,15 @@
 class ProfilesController < ApplicationController
 
 
+
   def index
      render json: Profile.all
   end
 
  def create
-   Profile.create(profile_params)
+   respond_to :json
+   Profile.create!(profile_params)
+
  end
 
  def show
@@ -21,10 +24,14 @@ class ProfilesController < ApplicationController
  private
 
  def profile_params
+   convert_image
    params.permit(:image)
  end
 
- # def convert_image
- #   Paperclip.io_adapters.for(params[:image])
- # end
+
+
+ def convert_image
+   profile =Paperclip.io_adapters.for(params[:image])
+
+ end
 end
