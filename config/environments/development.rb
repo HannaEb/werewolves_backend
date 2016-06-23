@@ -31,6 +31,16 @@ Rails.application.configure do
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
 
+
+#
+# config.paperclip_defaults = {
+#   :storage => :s3,
+#   :s3_credentials => {
+#       :bucket => ENV['s3_bucket'],
+#       :access_key_id => ENV['aws_key_id'],
+#       :secret_access_key => ENV['aws_secret']
+#   }
+# }
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
@@ -39,3 +49,4 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
+Paperclip.options[:command_path] = "/usr/local/bin/"

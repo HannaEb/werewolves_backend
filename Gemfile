@@ -1,17 +1,24 @@
 source 'https://rubygems.org'
-
+ruby "2.2.1"
 gem 'rails', '4.2.6'
 gem 'rails-api'
 gem 'devise_token_auth'
 gem 'devise'
 gem 'pg'
 gem 'omniauth'
+gem 'paperclip'
+gem 'aws-sdk'
 gem 'spring', :group => :development
-
+gem 'rails_12factor', group: :production
+gem 'active_model_serializers'
 gem 'rack-cors', :require => 'rack/cors'
-
+gem 'puma'
+gem 'certified'
+gem 'figaro'
+gem 'rspec-json_expectations'
 
 group :development, :test do
+
   gem 'byebug'
   gem 'rspec-rails'
   gem 'dotenv-rails'
